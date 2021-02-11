@@ -1,0 +1,33 @@
+
+
+{{ define "Home" }}
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+<h2>All Products</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Title</th> 
+    <th>Description</th>
+    
+
+  </tr>
+  {{ range . }}
+  <tr>
+    <td>{{ .Id}}</td>
+    <td>{{ .Title}}</td>
+    <td>{{.Description}}</td>
+    
+  </tr>
+  {{ end}}
+</table><hr>
+</body>
+{{ end }}
